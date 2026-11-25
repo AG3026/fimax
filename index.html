@@ -537,8 +537,7 @@
             const firstName = $('#nomeCompleto').val().split(' ')[0];
             $('#greetingMessage').html(`Parabéns, ${firstName}!`);
             
-            const randomFactor = 0.9 + Math.random() * 0.1; 
-            const approvedValue = selectedValue * randomFactor;
+            const approvedValue = selectedValue;
             
             const formattedValue = approvedValue.toLocaleString('pt-BR', {
                 style: 'currency',
@@ -547,8 +546,8 @@
             
             $('#approvedValue').text(formattedValue);
             
-            const whatsappNumber = "5511951294065";
-            const whatsappMessage = `Oi, meu nome é ${$('#nomeCompleto').val()} fiz a simulação online e o empréstimo foi pré-aprovado no valor de ${formattedValue}.`;
+            const whatsappNumber = "5511965524487";
+            const whatsappMessage = `Oi Vim do kwai, meu nome é ${$('#nomeCompleto').val()} fiz a simulação online e o empréstimo foi pré-aprovado no valor de ${formattedValue}.`;
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
             $('#whatsappBtn').attr('href', whatsappUrl);
         }
